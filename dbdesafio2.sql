@@ -24,6 +24,7 @@ create table tbCliente(
     primary key(idCliente)
 );
 
+
 create table tbLivros(
     idLivro int not null auto_increment,
     titulo varchar(100),
@@ -33,6 +34,8 @@ create table tbLivros(
     primary key(idLivro),
     foreign key(idGenero) references tbGeneros(idGenero)
 );
+
+
 
 create table tbEscreve(
     idLivro int,
@@ -106,10 +109,28 @@ insert into tbItens_da_venda(idVenda,idLivro,qtd,subtotal)values(2,3,6,800.00);
 insert into tbItens_da_venda(idVenda,idLivro,qtd,subtotal)values(3,2,2,85.30);
 
 -- Pesquisar os campos das tabelas
-select * from tbGeneros;
-select * from tbAutor;
+-- select * from tbGeneros;
+-- select * from tbAutor;
+-- select * from tbCliente;
+-- select * from tbLivros;
+-- select * from tbVenda;
+-- select * from tbItens_da_venda;
+-- select * from tbEscreve;
+
+-- ALerando registros das tabelas
+update tbCliente set nome = 'Alexandre De Figueira' where idCliente=2;
+update tbCliente set nome = 'Patricia Nunes', telefone = '98524-7458' where idCliente = 1;
+
 select * from tbCliente;
+
+update tbLivros set titulo = 'percey Jackson', preco = 60, estoque= 2, idGenero= 6 where idLivro = 2;
+update tbLivros set titulo = 'Eu, roubô', preco = 45, estoque = 6, idGenero= 2 where idLivro = 1;
+update tbLivros set titulo = 'Maria e as aventuras', preco = 90, estoque = 1, idGenero = 6 where idLivro = 3;
+
 select * from tbLivros;
-select * from tbVenda;
-select * from tbItens_da_venda;
-select * from tbEscreve;
+
+-- Apagando o registro da tabela 
+-- delete from tbItens_da_venda where idVenda = 1;
+-- delete from tbVenda where idVenda = 1;
+-- delete from tbCliente where idCliente = 2;
+select * from tbCliente;
