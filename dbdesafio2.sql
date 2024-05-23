@@ -134,3 +134,4 @@ select * from tbLivros;
 -- delete from tbVenda where idVenda = 1;
 -- delete from tbCliente where idCliente = 2;
 select * from tbCliente;
+
