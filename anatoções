@@ -1,9 +1,0 @@
-Tipos de registros 
-
-Caracter = 'Senac'
-Numérico 
-    inteiro = 10
-    real = 20.35
-Data = '2024-12-31'
-Hora = '14:06:25'
-Boolean = true ou false
