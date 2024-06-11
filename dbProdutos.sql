@@ -109,3 +109,31 @@ select * from produtos where nome not like '%y%';
 
 --Exibir todos os produtos que se iniciem com nome 'MO' e tenham como tipo as letras 'MA'
 select * from produtos where nome like 'MO%' and tipo like '%MA%';
+
+-- Colocando em ordem pelo order by
+select * from produtos order by valor;
+
+-- Oder by pelo ASC e DESC
+select * from produtos order by valor asc; -- padrão menor para o maior
+select * from produtos order by valor desc; -- maior para menor
+
+-- ordenando sem repetição 
+select distinct tipo from produtos order by tipo desc;
+select distinct tipo from produtos order by tipo asc;
+
+-- limitando oq aparece no terminal 
+select * from produtos order by valor desc limit 5;
+
+-- DESAFIO 
+-- 1. Escreva uma consulta que exiba os dados da tabela PRODUTOS na forma crescente pelo campo NOME. 
+select * from produtos order by nome asc;
+
+-- 2. Escreva uma consulta que exiba o NOME dos produtos ordenado de forma decrescente e o VALOR de forma crescente. 
+select nome,valor from produtos order by nome desc, valor asc;
+
+-- 3. Escreva uma consulta que exiba os três produtos mais caros. 
+select * from produtos order by valor desc limit 3;
+
+-- 4. Escreva uma consulta que exiba o VALOR do produto mais barato.
+select * from produtos order by valor asc limit 1;
+
