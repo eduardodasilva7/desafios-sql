@@ -88,7 +88,7 @@ create table tbTitulos(
 );
 
 create table tbPedidos(
-    numPed int not null,
+    numPed int not null auto_increment,
     codCli int not null,
     codFunc int not null,
     dataPed datetime not null,
@@ -176,6 +176,26 @@ insert into tbDependentes(codFunc, nomeDep, sexoDep) values(3, 'Mari Sol Linhare
 insert into tbDependentes(codFunc, nomeDep, sexoDep) values(6, 'Sonia da Silva', 'F');
 
 insert into tbTitulos(codCat, codGrav, nomeCd, valCd, qtdEstq) values(1, 1, 'Tribalistas', 30.00, 1500);
+insert into tbTitulos(codCat, codGrav, nomeCd, valCd, qtdEstq) values(1, 2, 'Tropicália', 50.00, 500);
+insert into tbTitulos(codCat, codGrav, nomeCd, valCd, qtdEstq) values(1, 1, 'Aquele abreço', 50.00, 600);
+insert into tbTitulos(codCat, codGrav, nomeCd, valCd, qtdEstq) values(1, 2, 'Refazenda', 60.00, 1000);
+insert into tbTitulos(codCat, codGrav, nomeCd, valCd, qtdEstq) values(1, 3, 'Totalmente Demais', 50.00, 2000);
+insert into tbTitulos(codCat, codGrav, nomeCd, valCd, qtdEstq) values(1, 3, 'Travessia', 55.00, 500);
+insert into tbTitulos(codCat, codGrav, nomeCd, valCd, qtdEstq) values(1, 2, 'Courage', 30.00, 200);
+insert into tbTitulos(codCat, codGrav, nomeCd, valCd, qtdEstq) values(4, 3, 'Legião Urbana', 20.00, 300);
+insert into tbTitulos(codCat, codGrav, nomeCd, valCd, qtdEstq) values(3, 2, 'The Beatles', 30.00, 300);
+insert into tbTitulos(codCat, codGrav, nomeCd, valCd, qtdEstq) values(4, 0, 'Rita Lee', 30.00, 500);
+
+insert into tbPedidos(codCli, codFimc, dataPed, valPed) values(1,2, '02/05/02', 1500.00);
+insert into tbPedidos(codCli, codFimc, dataPed, valPed) values(3,4, '02/05/02', 50.00);
+insert into tbPedidos(codCli, codFimc, dataPed, valPed) values(4,7, '02/06/02', 100.00);
+insert into tbPedidos(codCli, codFimc, dataPed, valPed) values(1,4, '02/02/03', 200.00);
+insert into tbPedidos(codCli, codFimc, dataPed, valPed) values(7,5, '02/03/03', 300.00);
+insert into tbPedidos(codCli, codFimc, dataPed, valPed) values(4,4, '02/03/03', 100.00);
+insert into tbPedidos(codCli, codFimc, dataPed, valPed) values(5,5, '02/03/03', 50.00);
+insert into tbPedidos(codCli, codFimc, dataPed, valPed) values(8,2, '02/03/03', 50.00);
+insert into tbPedidos(codCli, codFimc, dataPed, valPed) values(2,2, '02/03/03', 2000.00);
+insert into tbPedidos(codCli, codFimc, dataPed, valPed) values(7,1, '02/03/03', 3000.00);
  
 select * from tbArtistas;
 select * from tbGravadoras;
